@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title id="anot">Another page</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+  <h1>This is another page</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugi</p>
+  <!-- <a href="index.html">index page </a> -->
+  <span role="link" tabindex="0" onclick="onPage('index.html')">index page </span>
+  <script type="text/javascript">
+    function onPage(url) {
+      let encodeurl = encodeURI(url);
+      console.log(encodeurl);
+      $("body").load(encodeurl);
+      // $('#anot').attr("title","index page");
+      document.title="Index page";
+
+      history.pushState(null, null, url);
+    }
+  </script>
+</body>
+
+</html>
