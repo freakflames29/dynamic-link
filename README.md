@@ -1,1 +1,1 @@
-dynamic link by jquery
+# dynamic link by jquery and vanilla js
